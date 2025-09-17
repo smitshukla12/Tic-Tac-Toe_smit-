@@ -1,0 +1,8 @@
+.square {
+  background: white;
+  border: 1px solid #999;
+  width: 60px; height: 60px;
+  font-size: 24px; font-weight: bold;
+  cursor: pointer;
+}
+.square.highlight { background: #ffd54f; }

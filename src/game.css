@@ -1,0 +1,94 @@
+/* Container for the game */
+.game {
+  display: flex;
+  flex-direction: row; /* side by side board + info */
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+/* Game board container */
+.game-board {
+  background-color: #1e90ff; 
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Each row of squares */
+.board-row {
+  display: flex;
+}
+
+/* Individual square */
+.square {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f8ff;
+  transition: all 0.2s ease;
+}
+
+.square:hover {
+  background-color: #add8e6;
+}
+
+/* Highlight winning squares */
+.square.highlight {
+  background-color: #ffeb3b;
+  color: #000;
+}
+
+/* Game info container */
+.game-info {
+  text-align: left;
+  min-width: 180px;
+}
+
+/* Status message */
+.status {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* Reset & move buttons */
+.reset-btn,
+.game-info button {
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e90ff;
+  color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.reset-btn:hover,
+.game-info button:hover {
+  background-color: #0d6efd;
+}
+
+/* Optional: smaller screen responsiveness */
+@media (max-width: 600px) {
+  .game {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .game-info {
+    text-align: center;
+  }
+}
