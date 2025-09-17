@@ -35,7 +35,7 @@ export default function Game() {
    
     squares[i] = xIsNext ? 'X' : 'O';
 
-    // console.log("Placing:", squares[i], "at index:", i);
+    // console.log("Placing:", squares[i], "at index:", i); 
 
     setHistory([...newHistory, squares]);
     setStepNumber(newHistory.length);
